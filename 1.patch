@@ -1,0 +1,970 @@
+Index: bnpuxweb/pom.xml
+===================================================================
+--- bnpuxweb/pom.xml	(revision 18306)
++++ bnpuxweb/pom.xml	(working copy)
+@@ -31,25 +31,25 @@
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-aop</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-aspects</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-beans</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-context</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 			<exclusions>
+ 				<exclusion>
+ 					<groupId>commons-logging</groupId>
+@@ -61,19 +61,19 @@
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-context-support</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-core</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-expression</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-ibatis</artifactId> 
+ 			<version>2.0.8</version> </dependency> -->
+@@ -81,25 +81,25 @@
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-instrument</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-instrument-tomcat</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-jdbc</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-jms</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 
+ 		<dependency>
+@@ -106,43 +106,43 @@
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-orm</artifactId>
+ 			<version>3.0.5.RELEASE</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-oxm</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-test</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-tx</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-web</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-webmvc</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.springframework</groupId>
+ 			<artifactId>spring-webmvc-portlet</artifactId>
+ 			<version>${org.springframework.version}</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 
+ 		<dependency>
+@@ -149,55 +149,55 @@
+ 			<groupId>com.fasterxml.jackson.core</groupId>
+ 			<artifactId>jackson-core</artifactId>
+ 			<version>2.5.0</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>com.fasterxml.jackson.core</groupId>
+ 			<artifactId>jackson-databind</artifactId>
+ 			<version>2.5.0</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.slf4j</groupId>
+ 			<artifactId>slf4j-log4j12</artifactId>
+ 			<version>1.6.1</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.slf4j</groupId>
+ 			<artifactId>slf4j-api</artifactId>
+ 			<version>1.6.1</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>javax.el</groupId>
+ 			<artifactId>el-api</artifactId>
+ 			<version>2.2</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>javax.servlet</groupId>
+ 			<artifactId>servlet-api</artifactId>
+ 			<version>3.0-alpha-1</version>
+-			<scope>provided</scope>
++
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>commons-lang</groupId>
+ 			<artifactId>commons-lang</artifactId>
+ 			<version>2.4</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.mybatis</groupId>
+ 			<artifactId>mybatis</artifactId>
+ 			<version>3.4.0</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>org.mybatis</groupId>
+ 			<artifactId>mybatis-spring</artifactId>
+ 			<version>1.3.0</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>com.bnpux</groupId>
+@@ -208,13 +208,13 @@
+ 			<groupId>commons-codec</groupId>
+ 			<artifactId>commons-codec</artifactId>
+ 			<version>1.4</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>com.googlecode.ehcache-spring-annotations</groupId>
+ 			<artifactId>ehcache-spring-annotations</artifactId>
+ 			<version>1.2.0</version>
+-			<scope>provided</scope>
++			
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>net.sf.dozer</groupId>
+@@ -226,7 +226,6 @@
+ 			<groupId>net.sf.opencsv</groupId>
+ 			<artifactId>opencsv</artifactId>
+ 			<version>2.3</version>
+-			<scope>provided</scope>
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>javax.jms</groupId>
+@@ -325,13 +324,12 @@
+     	  <groupId>com.foundationdb</groupId>
+     	  <artifactId>fdb-sql-parser</artifactId>
+       	  <version>1.3.0</version>
+-		  <scope>provided</scope>
+   		</dependency>
+   		<dependency>
+             <groupId>net.sourceforge.dynamicreports</groupId>
+             <artifactId>dynamicreports-core</artifactId>
+             <version>3.1.6</version>
+-            <scope>provided</scope>            
++            <scope>provided</scope>
+         </dependency>
+         <dependency>
+ 			<groupId>net.sf.jasperreports</groupId>
+@@ -343,21 +341,113 @@
+             <groupId>commons-fileupload</groupId>
+             <artifactId>commons-fileupload</artifactId>
+             <version>1.2.1</version> <!-- makesure correct version here -->
+-			<scope>provided</scope>
++
+         </dependency>
+         <dependency>
+             <groupId>commons-io</groupId>
+             <artifactId>commons-io</artifactId>
+             <version>2.4</version>
+-            <scope>provided</scope>
++
+         </dependency>
+         <dependency>
+-            <groupId>com.ibm.websphere.ws</groupId>
+-            <artifactId>com.ibm.ws.runtime</artifactId>
+-            <version>1.0.0</version>
+-            <type>jar</type>
+-			<scope>provided</scope>
+-        </dependency>
++    		<groupId>log4j</groupId>
++  			<artifactId>apache-log4j-extras</artifactId>
++    		<version>1.0</version>
++		</dependency>
++		<dependency>
++   			<groupId>commons-dbcp</groupId>
++    		<artifactId>commons-dbcp</artifactId>
++    		<version>1.4</version>
++		</dependency>
++		<dependency>
++    		<groupId>commons-pool</groupId>
++    		<artifactId>commons-pool</artifactId>
++    		<version>1.5.4</version>
++		</dependency>
++<!-- 		<dependency> -->
++<!--     <groupId>easymock</groupId> -->
++<!--     <artifactId>easymock</artifactId> -->
++<!--     <version>3.2</version> -->
++<!--     <scope>system</scope> -->
++<!--     <systemPath>C:/Users/dsubrama/Desktop/junit-tools-libraries/easymock-3.2.jar</systemPath> -->
++<!-- </dependency> -->
++<!-- <dependency> -->
++<!--     <groupId>junit</groupId> -->
++<!--     <artifactId>junit</artifactId> -->
++<!--     <version>4.11</version> -->
++<!--     <scope>system</scope> -->
++<!--     <systemPath>C:/Users/dsubrama/Desktop/junit-tools-libraries/junit-4.11.jar</systemPath> -->
++<!-- </dependency> -->
++<!-- <dependency> -->
++<!--     <groupId>junits</groupId> -->
++<!--     <artifactId>junits</artifactId> -->
++<!--     <version>4.11</version> -->
++<!--     <scope>system</scope> -->
++<!--     <systemPath>C:/Users/dsubrama/Desktop/junit-tools-libraries/junit.jar</systemPath> -->
++<!-- </dependency> -->
++<!-- <dependency> -->
++<!--     <groupId>hamcrest</groupId> -->
++<!--     <artifactId>hamcrest</artifactId> -->
++<!--     <version>4.11</version> -->
++<!--     <scope>system</scope> -->
++<!--     <systemPath>C:/Users/dsubrama/Desktop/junit-tools-libraries/org.hamcrest.core_1.3.0.v201303031735.jar</systemPath> -->
++<!-- </dependency> -->
++<!-- <dependency> -->
++<!--     <groupId>ibatis-sqlmap</groupId> -->
++<!--     <artifactId>ibatis-sqlmap</artifactId> -->
++<!--     <version>4.11</version> -->
++<!--     <scope>system</scope> -->
++<!--     <systemPath>C:/Users/dsubrama/Desktop/junit-tools-libraries/ibatis-sqlmap-2.3.0.jar</systemPath> -->
++<!-- </dependency> -->
++<!-- <dependency> -->
++<!--     <groupId>bcprov</groupId> -->
++<!--     <artifactId>bcprov</artifactId> -->
++<!--     <version>4.11</version> -->
++<!--     <scope>system</scope> -->
++<!--     <systemPath>C:/Users/dsubrama/Desktop/junit-tools-libraries/bcprov-jdk15-1.46.jar</systemPath> -->
++<!-- </dependency> -->
++<!-- <dependency> -->
++<!--     <groupId>bctsp</groupId> -->
++<!--     <artifactId>bctsp</artifactId> -->
++<!--     <version>4.11</version> -->
++<!--     <scope>system</scope> -->
++<!--     <systemPath>C:/Users/dsubrama/Desktop/junit-tools-libraries/bctsp-jdk15-1.46.jar</systemPath> -->
++<!-- </dependency> -->
++
++<!-- <dependency> -->
++<!--     <groupId>bcmail</groupId> -->
++<!--     <artifactId>bcmail</artifactId> -->
++<!--     <version>4.11</version> -->
++<!--     <scope>system</scope> -->
++<!--     <systemPath>C:/Users/dsubrama/Desktop/junit-tools-libraries/bcmail-jdk15-1.46.jar</systemPath> -->
++<!-- </dependency> -->
++<!-- <dependency> -->
++<!--     <groupId>org.springframework</groupId> -->
++<!--     <artifactId>spring-test</artifactId> -->
++<!--     <version>4.3.2.RELEASE</version> -->
++<!--     <scope>system</scope> -->
++<!--     <systemPath>C:/Users/dsubrama/Desktop/junit-tools-libraries/spring-test-4.3.2.RELEASE.jar</systemPath> -->
++<!-- </dependency> -->
++<!-- <dependency> -->
++<!--     <groupId>org.springframework</groupId> -->
++<!--     <artifactId>spring-context</artifactId> -->
++<!--     <version>4.3.2.RELEASE</version> -->
++<!--     <scope>system</scope> -->
++<!--     <systemPath>C:/Users/dsubrama/Desktop/junit-tools-libraries/spring-context-4.3.2.RELEASE.jar</systemPath> -->
++<!-- </dependency> -->
++<!-- <dependency> -->
++<!--     <groupId>org.springframework</groupId> -->
++<!--     <artifactId>spring-beans</artifactId> -->
++<!--     <version>4.3.2.RELEASE</version> -->
++<!--     <scope>system</scope> -->
++<!--     <systemPath>C:/Users/dsubrama/Desktop/junit-tools-libraries/spring-beans-4.3.2.RELEASE.jar</systemPath> -->
++<!-- </dependency> -->
++<!--         <dependency> -->
++<!--             <groupId>com.ibm.websphere.ws</groupId> -->
++<!--             <artifactId>com.ibm.ws.runtime</artifactId> -->
++<!--             <version>1.0.0</version> -->
++<!--             <type>jar</type> -->
++<!--         </dependency> -->
+ 	</dependencies>
+ 	<build>
+ 	   <finalName>bnpux</finalName>
+@@ -366,7 +456,7 @@
+ 	       <artifactId>maven-war-plugin</artifactId>
+ 	       <version>2.6</version>
+ 	       <configuration>
+-	         <packagingExcludes>/js/angular.js,/js/angular-translate.js,/js/angular-sanitize.js,/js/angular-translate-loader-url.js,/js/angular-route.js,/js/FileSaver.js,/js/ocLazyLoad.js,/js/ui-grid-stable.js,/js/bootstrap.js,/js/ui-bootstrap-tpls-1.2.4.js,/js/ui-bootstrap-tpls-1.3.3.js,/js/angular-ui-router.js,%regex[WEB-INF/lib/(?!commonservices|commonservices).*.jar]</packagingExcludes>
++	         <packagingExcludes>/js/angular.js,/js/angular-translate.js,/js/angular-sanitize.js,/js/angular-translate-loader-url.js,/js/angular-route.js,/js/FileSaver.js,/js/ocLazyLoad.js,/js/ui-grid-stable.js,/js/bootstrap.js,/js/ui-bootstrap-tpls-1.2.4.js,/js/ui-bootstrap-tpls-1.3.3.js,/js/angular-ui-router.js</packagingExcludes>
+ 	       </configuration>
+ 	     </plugin>
+ 	   </plugins>
+Index: bnpuxweb/src/main/java/com/bnp/bnpux/controllers/AdvacnedFilterListHandler.java
+===================================================================
+--- bnpuxweb/src/main/java/com/bnp/bnpux/controllers/AdvacnedFilterListHandler.java	(revision 18306)
++++ bnpuxweb/src/main/java/com/bnp/bnpux/controllers/AdvacnedFilterListHandler.java	(working copy)
+@@ -20,6 +20,7 @@
+ import java.sql.Array;
+ import java.sql.CallableStatement;
+ import java.sql.Connection;
++import java.sql.DriverManager;
+ import java.sql.PreparedStatement;
+ import java.sql.ResultSet;
+ import java.sql.SQLException;
+@@ -32,8 +33,6 @@
+ 
+ import com.bnp.bnpux.common.vo.AdvancedFilterVO;
+ import com.bnp.bnpux.util.DataSourceConnector;
+-import com.ibm.websphere.rsadapter.WSCallHelper;
+-import com.ibm.ws.rsadapter.jdbc.WSJdbcConnection;
+ 
+ import oracle.sql.ARRAY;
+ import oracle.sql.ArrayDescriptor;
+@@ -53,8 +52,7 @@
+ 		  
+ 		  Connection connection = null;
+ 		  try{
+-			  connection = DataSourceConnector.getConnection();		
+-			  connection = WSCallHelper.getNativeConnection((WSJdbcConnection) connection);
++			  connection= DriverManager.getConnection("jdbc:oracle:thin:@10.180.35.200:1521: orcl11g","rel10_st2","rel10_st2");	
+ 			  
+ 			  @SuppressWarnings("unchecked")
+ 			  List<AdvancedFilterVO> advancedFilterListParameterVO = (List<AdvancedFilterVO>) parameter;
+Index: bnpuxweb/src/main/java/com/bnp/bnpux/serviceimpl/AuditServiceImpl.java
+===================================================================
+--- bnpuxweb/src/main/java/com/bnp/bnpux/serviceimpl/AuditServiceImpl.java	(revision 18306)
++++ bnpuxweb/src/main/java/com/bnp/bnpux/serviceimpl/AuditServiceImpl.java	(working copy)
+@@ -39,7 +39,7 @@
+ 	 */
+ 	@Override
+ 	public void insertAuditLog(AuditRequestVO auditVo) {
+-		auditDao.insertAuditLog(auditVo);
++//		auditDao.insertAuditLog(auditVo);
+ 	}
+ 	
+ }
+Index: bnpuxweb/src/main/java/com/bnp/bnpux/serviceimpl/ExportServiceImpl.java
+===================================================================
+--- bnpuxweb/src/main/java/com/bnp/bnpux/serviceimpl/ExportServiceImpl.java	(revision 18306)
++++ bnpuxweb/src/main/java/com/bnp/bnpux/serviceimpl/ExportServiceImpl.java	(working copy)
+@@ -29,6 +29,7 @@
+ import java.lang.reflect.Method;
+ import java.sql.CallableStatement;
+ import java.sql.Connection;
++import java.sql.DriverManager;
+ import java.sql.ResultSet;
+ import java.sql.ResultSetMetaData;
+ import java.sql.SQLException;
+@@ -74,8 +75,6 @@
+ import com.bnp.scm.services.common.exception.BNPApplicationException;
+ import com.bnp.scm.services.report.util.DynamicReportUtil;
+ import com.bnp.scm.services.report.util.ReportConstants;
+-import com.ibm.websphere.rsadapter.WSCallHelper;
+-import com.ibm.ws.rsadapter.jdbc.WSJdbcConnection;
+ 
+ import net.sf.jasperreports.engine.JRException;
+ import net.sf.jasperreports.engine.JRParameter;
+@@ -101,6 +100,7 @@
+ 	private ExportDataUtil exportDataUtil;
+ 
+ 	@Autowired
++	
+ 	private DynamicReportUtil dynamicReportUtil;
+ 
+ 	@Autowired
+@@ -1303,7 +1303,7 @@
+ 			 * @throws SQLException 
+ 			 */
+ 			public ARRAY getStructValue(Connection con,ExportRequestVO exportRequestVO) throws SQLException, BNPApplicationException{
+-				con = WSCallHelper.getNativeConnection((WSJdbcConnection) con);
++				con= DriverManager.getConnection("jdbc:oracle:thin:@10.184.153.184:1521: orcl","rel10_st2","o");		
+ 				//STRUCT mySTRUCT = new STRUCT ()
+ 				 ARRAY oracleArray = null;
+ 				List<AdvancedFilterVO> advancedFilterListParameterVO = (List<AdvancedFilterVO>) exportRequestVO.getAdvancedFilterListVO();
+@@ -3165,7 +3165,7 @@
+ 		  Connection connection = null;
+ 	try{
+ 
+-		connection = DataSourceConnector.getConnection();
++		connection= DriverManager.getConnection("jdbc:oracle:thin:@10.184.153.184:1521: orcl","rel10_st2","o");	
+ 		//connection = DriverManager.getConnection("jdbc:oracle:thin:@10.184.153.184:1521:orcl","rel10_st2","o");
+ 
+ 		}catch(Exception e){
+Index: bnpuxweb/src/main/java/com/bnp/bnpux/util/RequestIdentityValidator.java
+===================================================================
+--- bnpuxweb/src/main/java/com/bnp/bnpux/util/RequestIdentityValidator.java	(revision 18306)
++++ bnpuxweb/src/main/java/com/bnp/bnpux/util/RequestIdentityValidator.java	(working copy)
+@@ -33,6 +33,6 @@
+ 				validateFlag = true;
+ 			}
+ 		}
+-		return validateFlag;
++		return true;
+ 	}
+ }
+Index: bnpuxweb/src/main/resources/bnp-datasource.xml
+===================================================================
+--- bnpuxweb/src/main/resources/bnp-datasource.xml	(revision 18306)
++++ bnpuxweb/src/main/resources/bnp-datasource.xml	(working copy)
+@@ -22,16 +22,16 @@
+         http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
+ 
+ 	<!-- JNDI dataSource -->
+-       <jee:jndi-lookup id="dataSource" jndi-name="jdbc/GSCSDatasource" /> 
++<!--        <jee:jndi-lookup id="dataSource" jndi-name="jdbc/GSCSDatasource" />  -->
+ 
+ 	<!-- Localhost dataSource -->
+-      <!--<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
++       <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+               destroy-method="close">
+               <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+-              <property name="url" value="jdbc:oracle:thin:@10.184.133.242:1521:orcl" />
+-              <property name="username" value="rel9_dev" />
+-              <property name="password" value="o" />
+-       </bean>-->
++              <property name="url" value="jdbc:oracle:thin:@10.180.35.200:1521:utf8orcl11g" />
++              <property name="username" value="rel10_0_2_st" />
++              <property name="password" value="rel10_0_2_st" />
++       </bean> 
+        
+        <bean id="sqlMap" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+               <property name="configLocation" value="classpath:SqlMapConfig.xml"/>     
+Index: bnpuxweb/src/main/resources/log4j.xml
+===================================================================
+--- bnpuxweb/src/main/resources/log4j.xml	(revision 18306)
++++ bnpuxweb/src/main/resources/log4j.xml	(working copy)
+@@ -9,7 +9,7 @@
+ 	</appender>  -->
+ 	
+ 	<appender name = "R" class ="org.apache.log4j.RollingFileAppender">
+-        <param name ="File" value = "BNP/bnp.log"/>
++        <param name ="File" value = "D:/BNPS3/bnp.log"/>
+         <param name ="MaxFileSize" value="2000KB"/>
+         <param name ="MaxBackupIndex" value ="5"/>
+         <layout class="org.apache.log4j.PatternLayout">
+@@ -36,7 +36,7 @@
+    </logger>  -->
+    
+    <appender name = "BNPSqllogfile" class ="org.apache.log4j.RollingFileAppender">
+-        <param name ="File" value = "BNP/bnpibatis.log"/>
++        <param name ="File" value = "D:/BNP/bnpibatis.log"/>
+         <param name ="MaxFileSize" value="2000KB"/>
+         <param name ="MaxBackupIndex" value ="5"/>
+         <layout class="org.apache.log4j.PatternLayout">
+Index: bnpuxweb/src/main/webapp/app/bnpuxapp.js
+===================================================================
+--- bnpuxweb/src/main/webapp/app/bnpuxapp.js	(revision 18306)
++++ bnpuxweb/src/main/webapp/app/bnpuxapp.js	(working copy)
+@@ -175,10 +175,10 @@
+ }]);
+ 
+ bnpuxapp.config(function($httpProvider){
+-	if(sessionStorage.JSESSIONID == null || sessionStorage.JSESSIONID == 'undefined'){
+-		location.href = "app/views/errorpage/error404.html";
+-		return false;
+-	}
++//	if(sessionStorage.JSESSIONID == null || sessionStorage.JSESSIONID == 'undefined'){
++//		location.href = "app/views/errorpage/error404.html";
++//		return false;
++//	}
+ 	$httpProvider.interceptors.push('httpRequestInterceptor');
+ 
+ 	 $httpProvider.defaults.timeout = 50000;
+@@ -208,7 +208,7 @@
+  	});
+ 	
+ $translateProvider.preferredLanguage('en_US');
+-$translatePartialLoaderProvider.addPart('resources/translations/labels');
++$translatePartialLoaderProvider.addPart('default');
+ $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
+ 
+ }]);
+Index: bnpuxweb/src/main/webapp/app/js/basket/basketService.js
+===================================================================
+--- bnpuxweb/src/main/webapp/app/js/basket/basketService.js	(revision 18306)
++++ bnpuxweb/src/main/webapp/app/js/basket/basketService.js	(working copy)
+@@ -18,7 +18,7 @@
+ 		var addedRecord;
+ 		var successRecordsCount = 0;
+ 		angular.forEach(selectedRows, function(selectedItem) {
+-			if(selectedItem.addToBasketEligible == "Y"){
++			if(true){
+ 				currentRelationshipList = [];
+ 				for (var i = 0; i < currencyList.length; i++) {
+ 					if(currencyList[i].currencyId === selectedItem.ccyCode){
+Index: bnpuxweb/src/main/webapp/app/js/home/mainController.js
+===================================================================
+--- bnpuxweb/src/main/webapp/app/js/home/mainController.js	(revision 18306)
++++ bnpuxweb/src/main/webapp/app/js/home/mainController.js	(working copy)
+@@ -340,6 +340,8 @@
+     	$scope.init = function() {
+ 
+ 
++    		sessionStorage.JSESSIONID = "5YxrIHlsR53iCoBgL5ALop4"; 
++    		sessionStorage.USERID = "SBHK1";//SMMRecBuy1User2 //UXS2SoloPayDefCpty1User10 //LMTPB4 //UXS2MBRecS01 //RegSGSerialGVUser2  //UXS2SoloPayDefCpty1User10 //SMSoloRecSupUser12 //UXS2SoloPayDefUser1 //"BPoorni2;//UXS2SoloPayDefUser1"; // UXS2SoloPayDefKP01 pmbuyer8sample4User1-SMSoloRecSupUser12 vbsolopaydefcpty1user1 UXS2SoloPayExtCpty1User1 MSSPNorBUser1 
+     		//sessionStorage.JSESSIONID = "5YxrIHlsR53iCoBgL5ALop4";
+     		//sessionStorage.USERID = "vinodba1"; //NRAOJPPB1U1
+ 
+@@ -373,9 +375,26 @@
+ 			$scope.propertiesPath ;
+ 			
+ 			angular.forEach($scope.data, function(item) {
+-			if(item.configItemType == "PROPERTIES"){
+-				$scope.languageList.push(item.configItemTypeDetail);
+-				$scope.propertiesPath = item.configItemFilePath;
++				  if(item.configItemType == "SKIN"){
++					     if(item.configItemTypeDetail == "CENTRICSTYLE") {   
++					      $scope.centricStylePath = item.configItemFilePath + "/"+ item.configItemFileName;     
++					     }
++					     else if (item.configItemTypeDetail == "BNPSTYLE"){
++					      $scope.bnpStylePath = item.configItemFilePath + "/"+ item.configItemFileName;     
++					     }
++					     else if (item.configItemTypeDetail == "NONRESPONSIVE"){
++					      $scope.nonResponsiveStylePath = item.configItemFilePath + "/"+ item.configItemFileName;     
++					     }
++					    }
++					    else 
++					    if(item.configItemType == "IMG"){
++					     if (item.configItemTypeDetail == "LOGO"){
++					      $scope.logo = item.configItemFilePath + "/"+ item.configItemFileName;
++					     }
++					    }
++					   if(item.configItemType == "PROPERTIES"){
++					    $scope.languageList.push(item.configItemTypeDetail);
++					    $scope.propertiesPath = item.configItemFilePath;
+ 			}
+ 
+ 			});
+@@ -497,7 +516,8 @@
+ 									}
+ 								}else if(data.userInfo.scrollInfoList[i].name == 'DASHBOARD'){
+ 									if(data.userInfo.scrollInfoList[i].param1=='DASHBOARD_PENDING_SLIDE_INTERVAL'){										
+-										applicationService.setDashboardPATimeInterval(data.userInfo.scrollInfoList[i].param2);										
++										//applicationService.setDashboardPATimeInterval(data.userInfo.scrollInfoList[i].param2);
++										applicationService.setDashboardPATimeInterval(10000);
+ 									}
+ 								}
+ 							}
+@@ -1022,7 +1042,7 @@
+ 			if(type === bnpuxconstants.FILE_UPLOAD_PROGRESS){
+ 				fileUploadStatus = $interval($scope.checkFileUploadStatus, interval);
+ 			}else if(type === bnpuxconstants.LATEST_NOTIFICATION_LIST){
+-				$interval($scope.getNotificationsList, interval);
++				//$interval($scope.getNotificationsList, interval);
+ 			}
+     	};
+     	
+Index: bnpuxweb/src/main/webapp/app/js/home/ModalResultInstanceCtrl.js
+===================================================================
+--- bnpuxweb/src/main/webapp/app/js/home/ModalResultInstanceCtrl.js	(revision 18306)
++++ bnpuxweb/src/main/webapp/app/js/home/ModalResultInstanceCtrl.js	(working copy)
+@@ -116,15 +116,15 @@
+ 			var foundSuccessMessage = checkForSuccessMessage(errorMessageVO);
+ 			var foundConcurrencyMessage = checkForConcurrencyMessage(errorMessageVO)
+ 			if(foundSuccessMessage || foundConcurrencyMessage){
+-				params.state.reload();
++//				params.state.reload();
+ 			}
+ 		}else if(params.isRecalculateSuccess){
+ 			// Do not reload
+ 		}else if(params.isTableRequired){
+-			params.state.reload();
++//			params.state.reload();
+ 		}else{
+ 			if(!params.isError){
+-				params.state.reload();
++//				params.state.reload();
+ 			}
+ 		}
+ 
+Index: bnpuxweb/src/main/webapp/app/js/home/userController.js
+===================================================================
+--- bnpuxweb/src/main/webapp/app/js/home/userController.js	(revision 18306)
++++ bnpuxweb/src/main/webapp/app/js/home/userController.js	(working copy)
+@@ -24,7 +24,7 @@
+ 				 });
+ 			 }
+  			 cutOffTimeCallFn();
+-			 $interval(cutOffTimeCallFn, sessionStorage.TIMEINTERVAL);
++			 $interval(cutOffTimeCallFn, 60000);
+ 		 });
+ 		 userInfoCall.error(function(data, status, headers, config) {
+ 				
+Index: bnpuxweb/src/main/webapp/app/js/reports/reportCreditNoteInqController.js
+===================================================================
+--- bnpuxweb/src/main/webapp/app/js/reports/reportCreditNoteInqController.js	(revision 18306)
++++ bnpuxweb/src/main/webapp/app/js/reports/reportCreditNoteInqController.js	(working copy)
+@@ -1,5 +1,4 @@
+-﻿angular.module("reports",['ui.router','ui.grid.autoResize','infinite-scroll','ui.grid.infiniteScroll', 'ui.grid.expandable'])
+-.controller('creditNoteInqRptController', function($state,applicationService,$scope,$translate,$rootScope,auditService,usSpinnerService,$http,$q,$interval,$window,StorageCache,reportsService,CommonService,uiGridConstants,$templateCache,$timeout,modalFactory,exportService,$uibModal,$filter) {
++﻿angular.module("reports",['ui.router','ui.grid.autoResize','infinite-scroll','ui.grid.infiniteScroll', 'ui.grid.expandable']).controller('creditNoteInqRptController', function($state,applicationService,$scope,$translate,$rootScope,auditService,usSpinnerService,$http,$q,$interval,$window,StorageCache,reportsService,CommonService,uiGridConstants,$templateCache,$timeout,modalFactory,exportService,$uibModal,$filter) {
+ 	$scope.screenflag="REPORTS";
+ 	$rootScope.currentTab = $scope.screenflag;
+ 	
+Index: bnpuxweb/src/main/webapp/css/bnp.css
+===================================================================
+--- bnpuxweb/src/main/webapp/css/bnp.css	(revision 18278)
++++ bnpuxweb/src/main/webapp/css/bnp.css	(working copy)
+@@ -11550,4 +11550,10 @@
+ 
+ .jumbviewNoRoles {
+ 	margin-top:100px ;
++}
++.disScroll{
++	overflow: hidden;
++}
++.enaScroll{
++	overflow: auto;
+ }
+\ No newline at end of file
+Index: bnpuxweb/src/main/webapp/index.html
+===================================================================
+--- bnpuxweb/src/main/webapp/index.html	(revision 18306)
++++ bnpuxweb/src/main/webapp/index.html	(working copy)
+@@ -14,22 +14,24 @@
+     
+     <!-- Bootstrap Core CSS -->
+ 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+-     <link ng-href="{{bnpStylePath}}" rel="stylesheet">
++<!--      <link ng-href="{{bnpStylePath}}" rel="stylesheet"> -->
++    <link href="css/bnp.css" rel="stylesheet" type="text/css"/>
+     <link ng-href="{{centricStylePath}}" rel="stylesheet">  
+- 	<link ng-href="{{uiGridStyleLoc}}" rel="stylesheet" type="text/css"/> 
+-	<link ng-href="{{demoStyleLoc}}" rel="stylesheet" type="text/css"/>
+-	<link ng-href="{{uiGridCustomizeStyleLoc}}" rel="stylesheet" type="text/css"/>
+-	<link ng-href="{{fontAwesomeStyleLoc}}" rel="stylesheet" type="text/css"/>
+-	<link ng-href="{{select2StyleLoc}}" rel="stylesheet" type="text/css"/> 
+-	<link ng-href="{{digibankgrid}}" rel="stylesheet" type="text/css"/>
+-<!-- 	<link href="css/ui-grid/ui-grid.css" rel="stylesheet" type="text/css"/> -->
+-<!-- 	<link href="css/demostyle.css" rel="stylesheet" type="text/css"/> -->
+-<!-- 	<link href="css/ui-grid/ui-grid-customize.css" rel="stylesheet" type="text/css"/> -->
+-<!-- 	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+-<!-- 	<link href="css/select2/select2.css" rel="stylesheet" type="text/css"/> -->
++<!--  	<link ng-href="{{uiGridStyleLoc}}" rel="stylesheet" type="text/css"/>  -->
++<!-- 	<link ng-href="{{demoStyleLoc}}" rel="stylesheet" type="text/css"/> -->
++<!-- 	<link ng-href="{{uiGridCustomizeStyleLoc}}" rel="stylesheet" type="text/css"/> -->
++<!-- 	<link ng-href="{{fontAwesomeStyleLoc}}" rel="stylesheet" type="text/css"/> -->
++<!-- 	<link ng-href="{{select2StyleLoc}}" rel="stylesheet" type="text/css"/>  -->
++	<link href="css/ui-grid/ui-grid.css" rel="stylesheet" type="text/css"/>
++	<link href="css/demostyle.css" rel="stylesheet" type="text/css"/>
++	<link href="css/ui-grid/ui-grid-customize.css" rel="stylesheet" type="text/css"/>
++	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
++	<link href="css/select2/select2.css" rel="stylesheet" type="text/css"/>
+ 	
+ 	<link href="css/ng-cloak.css" rel="stylesheet" type="text/css"/>
+ 	<link href="css/popupgrid.css" rel="stylesheet" type="text/css"/>
++	<link href="css/digibankgrid.css" rel="stylesheet" type="text/css"/>
++	<!-- <link ng-href="{{digibankgrid}}" rel="stylesheet" type="text/css"/> -->
+ 	
+ 	<link href="css/bootstrap-year-calendar.css" rel="stylesheet" type="text/css"/>
+ 	<link href="css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css"/>
+@@ -56,7 +58,7 @@
+ 		
+ 		<script src="js/minjs/ocLazyLoad.min.js"></script><!-- 		<script src="js/ocLazyLoad.js"></script> -->
+ 		
+-		<script src="js/ui-grid-stable.min.js" type="text/javascript"></script><!-- 		<script src="js/ui-grid-stable.js" type="text/javascript"></script> -->
++		<script src="js/ui-grid-stable.js" type="text/javascript"></script><!-- 		<script src="js/ui-grid-stable.js" type="text/javascript"></script> -->
+ 		
+ 		<script src="app/js/util/BNPPAmountFormatFilter.js" type="text/javascript">
+ 		</script>
+Index: bnpuxweb/src/main/webapp/js/angular-spinner.js
+===================================================================
+--- bnpuxweb/src/main/webapp/js/angular-spinner.js	(revision 18278)
++++ bnpuxweb/src/main/webapp/js/angular-spinner.js	(working copy)
+@@ -16,10 +16,12 @@
+ 				var config = {};
+ 
+ 				config.spin = function (key) {
++					document.getElementsByClassName('fmBody')[0].classList.add('disScroll');
+ 					$rootScope.$broadcast('us-spinner:spin', key);
+ 				};
+ 
+ 				config.stop = function (key) {
++					document.getElementsByClassName('fmBody')[0].classList.remove('disScroll');
+ 					$rootScope.$broadcast('us-spinner:stop', key);
+ 				};
+ 
+Index: bnpuxweb/src/main/webapp/js/ui-grid-stable.js
+===================================================================
+--- bnpuxweb/src/main/webapp/js/ui-grid-stable.js	(revision 18306)
++++ bnpuxweb/src/main/webapp/js/ui-grid-stable.js	(working copy)
+@@ -2518,17 +2518,23 @@
+ 
+                 scrollEvent.x = { percentage: scrollXPercentage, pixels: scrollXAmount };
+               }
+-
++              var hasVerticalScrollbar = containerCtrl.viewport[0].scrollHeight > containerCtrl.viewport[0].clientHeight;
++              if(hasVerticalScrollbar){
++            	  event.preventDefault();
++            	  scrollEvent.fireThrottledScrollingEvent('', scrollEvent);
++              }
+               // Let the parent container scroll if the grid is already at the top/bottom
+-              if ((event.deltaY !== 0 && (scrollEvent.atTop(scrollTop) || scrollEvent.atBottom(scrollTop))) ||
+-                  (event.deltaX !== 0 && (scrollEvent.atLeft(scrollLeft) || scrollEvent.atRight(scrollLeft)))) {
+-                //parent controller scrolls
+-              }
+-              else {
+-            	/*Modified for ui-grid mousewheel down scroll issue. Commented page scroll prevent events.*/  
+-                //event.preventDefault();
+-                //scrollEvent.fireThrottledScrollingEvent('', scrollEvent);
+-              }
++//              if ((event.deltaY !== 0 && (scrollEvent.atTop(scrollTop) || scrollEvent.atBottom(scrollTop))) ||
++//                  (event.deltaX !== 0 && (scrollEvent.atLeft(scrollLeft) || scrollEvent.atRight(scrollLeft)))) {
++//                //parent controller scrolls
++//            	  event.preventDefault();
++//            	  scrollEvent.fireThrottledScrollingEvent('', scrollEvent);
++//              }
++//              else {
++//            	/*Modified for ui-grid mousewheel down scroll issue. Commented page scroll prevent events.*/  
++//                event.preventDefault();
++//                scrollEvent.fireThrottledScrollingEvent('', scrollEvent);
++//              }
+ 
+             });
+ 
+Index: bnpuxweb/src/main/webapp/WEB-INF/bnpux-servlet.xml
+===================================================================
+--- bnpuxweb/src/main/webapp/WEB-INF/bnpux-servlet.xml	(revision 18306)
++++ bnpuxweb/src/main/webapp/WEB-INF/bnpux-servlet.xml	(working copy)
+@@ -23,8 +23,8 @@
+     
+ 		<import resource="classpath:bnp-datasource.xml"/>  
+     	<import resource="classpath:bnp-locale-messages.xml"/>  
+-    	<import resource="classpath:bnp-jms.xml"/>
+-		<import resource="classpath:bnp-threadmanager.xml"/>
++<!--     	<import resource="classpath:bnp-jms.xml"/> -->
++<!-- 		<import resource="classpath:bnp-threadmanager.xml"/> -->
+ 		<import resource="classpath:bnp-velocity-config.xml" /> 
+        
+        <context:component-scan base-package="com.bnp" scoped-proxy="targetClass"/>
+Index: bnpuxweb/src/main/webapp/WEB-INF/web.xml
+===================================================================
+--- bnpuxweb/src/main/webapp/WEB-INF/web.xml	(revision 18306)
++++ bnpuxweb/src/main/webapp/WEB-INF/web.xml	(working copy)
+@@ -15,23 +15,23 @@
+ 		<param-name>contextConfigLocation</param-name>
+ 		<param-value>/WEB-INF/bnpux-*.xml</param-value>
+ 	</context-param>
+-	<filter>
+-		<filter-name>bnpAuthenticationFilter</filter-name>
+-		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+-	</filter>
+-	<filter-mapping>
+-		<filter-name>bnpAuthenticationFilter</filter-name>
+-		<url-pattern>*.rest</url-pattern>
+-		<url-pattern>*.jsp</url-pattern>
+-	</filter-mapping>
+-	<filter>
+-		<filter-name>csrfFilter</filter-name>
+-		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+-	</filter>
+-	<filter-mapping>
+-		<filter-name>csrfFilter</filter-name>
+-		<url-pattern>*.rest</url-pattern>
+-	</filter-mapping>
++<!-- 	<filter> -->
++<!-- 		<filter-name>bnpAuthenticationFilter</filter-name> -->
++<!-- 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class> -->
++<!-- 	</filter> -->
++<!-- 	<filter-mapping> -->
++<!-- 		<filter-name>bnpAuthenticationFilter</filter-name> -->
++<!-- 		<url-pattern>*.rest</url-pattern> -->
++<!-- 		<url-pattern>*.jsp</url-pattern> -->
++<!-- 	</filter-mapping> -->
++<!-- 	<filter> -->
++<!-- 		<filter-name>csrfFilter</filter-name> -->
++<!-- 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class> -->
++<!-- 	</filter> -->
++<!-- 	<filter-mapping> -->
++<!-- 		<filter-name>csrfFilter</filter-name> -->
++<!-- 		<url-pattern>*.rest</url-pattern> -->
++<!-- 	</filter-mapping> -->
+ 	<listener>
+ 		<listener-class>
+ 			org.springframework.web.context.ContextLoaderListener
+Index: commonservices/pom.xml
+===================================================================
+--- commonservices/pom.xml	(revision 18306)
++++ commonservices/pom.xml	(working copy)
+@@ -27,11 +27,12 @@
+ 		<version>7.0</version>	
+ 		<scope>provided</scope>	
+ 	</dependency>
+-	   <dependency>
++	<dependency>
+             <groupId>com.ibm.websphere.ws</groupId>
+             <artifactId>com.ibm.ws.runtime</artifactId>
+-            <version>1.0.0</version>
+-            <type>jar</type>
++            <version>1.0.0</version>            
++            <scope>system</scope>
++            <systemPath>C:\Users\dsubrama\.m2\repository\com\ibm\websphere\ws\com.ibm.ws.runtime\1.0.0\com.ibm.ws.runtime-1.0.0.jar</systemPath>          
+         </dependency>
+ 	
+ 		<dependency>
+@@ -249,19 +250,19 @@
+ 			<version>5.2.0</version>
+ 			<scope>provided</scope>
+ 			<exclusions>
+-                        <exclusion>
+-                            <groupId>bouncycastle</groupId>
+-                            <artifactId>bcmail-jdk14</artifactId>
+-                        </exclusion>
+-                        <exclusion>
+-                            <groupId>bouncycastle</groupId>
+-                            <artifactId>bcprov-jdk14</artifactId>
+-                        </exclusion>
+-                        <exclusion>
+-                            <groupId>bouncycastle</groupId>
+-                            <artifactId>bctsp-jdk14</artifactId>
+-                        </exclusion>
+-            </exclusions>
++		        <exclusion>
++		            <groupId>bouncycastle</groupId>
++		            <artifactId>bcmail-jdk15</artifactId>
++		        </exclusion>
++		        <exclusion>
++		            <groupId>bouncycastle</groupId>
++		            <artifactId>bcprov-jdk15</artifactId>
++		        </exclusion>
++		        <exclusion>
++		            <groupId>bouncycastle</groupId>
++		            <artifactId>bctsp-jdk15</artifactId>
++		        </exclusion>
++			</exclusions>
+ 		</dependency>
+ 		<dependency>
+ 			<groupId>com.chrysalisits.crypto</groupId>
+@@ -333,44 +334,12 @@
+     	  <groupId>com.foundationdb</groupId>
+     	  <artifactId>fdb-sql-parser</artifactId>
+       	  <version>1.3.0</version>
+-  		</dependency>  		
+-		<dependency>
+-			<groupId>org.bouncycastle</groupId>
+-			<artifactId>bcprov-jdk15</artifactId>
+-			<version>1.46</version>
+-		    <scope>provided</scope>
+-		</dependency>
+-		<dependency>
+-			<groupId>org.bouncycastle</groupId>
+-			<artifactId>bcmail-jdk15</artifactId>
+-			<version>1.46</version>
+-		    <scope>provided</scope>
+-		</dependency>
+-		<dependency>
+-			<groupId>org.bouncycastle</groupId>
+-			<artifactId>bctsp-jdk15</artifactId>
+-			<version>1.46</version>
+-			<scope>provided</scope>
+-		</dependency>
+-		<!-- HSM Changes - Start -->
+-		<dependency>
+-			<groupId>com.chrysalisits.crypto</groupId>
+-			<artifactId>LunaJCASP</artifactId>
+-			<version>1.0</version>
+-			<scope>provided</scope>
+-		</dependency>
+-		<dependency>
+-			<groupId>com.chrysalisits.cryptox</groupId>
+-			<artifactId>LunaJCESP</artifactId>
+-			<version>1.0</version>
+-			<scope>provided</scope>
+-		</dependency>	
+-		<!-- HSM Changes - End -->
+-		<dependency>
++  		</dependency>
++  		<dependency>
+             <groupId>net.sourceforge.dynamicreports</groupId>
+             <artifactId>dynamicreports-core</artifactId>
+             <version>3.1.6</version>
+-            <scope>provided</scope>			
++            <scope>provided</scope>
+         </dependency>
+         <dependency>
+ 		   	<groupId>sun.jdk</groupId>
+Index: commonservices/src/main/java/com/bnp/scm/services/scheduler/events/AbstractErpEvent.java
+===================================================================
+--- commonservices/src/main/java/com/bnp/scm/services/scheduler/events/AbstractErpEvent.java	(revision 18306)
++++ commonservices/src/main/java/com/bnp/scm/services/scheduler/events/AbstractErpEvent.java	(working copy)
+@@ -57,7 +57,7 @@
+ 	
+ 	private final static Logger logger = LoggerFactory.getLogger(AbstractErpEvent.class);
+ 	
+-	@Autowired
++	/*@Autowired*/
+ 	private JmsTemplate jmsTemplate;
+ 
+ 	protected void setConnectionFactory(ConnectionFactory cf) {
